@@ -1,0 +1,19 @@
+@use "../../../styles/util" as *
+
+button
+    @include flex(center)
+    @include radius(.5rem)
+    @include transition
+    appearance: none
+    background: none
+    border: none
+    cursor: pointer
+
+    text-transform: uppercase
+    font-family: inherit
+    letter-spacing: 2px
+    font-weight: 700
+    font-size: 1rem
+
+    &:hover
+        opacity: .7

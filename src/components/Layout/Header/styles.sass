@@ -1,0 +1,38 @@
+@use '../../../styles/util' as *
+
+header
+    @include layout(700px)
+    margin-top: 2rem
+
+    .border-wrapper, .score
+        @include radius(5px)
+
+    .border-wrapper
+        border: solid var(--color-border)
+
+    .flex-wrapper
+        @include padding
+        @include flex(space-between)
+
+    .logo img
+        height: 3rem
+    
+    .score
+        @include padding(.5rem 1.5rem)
+        background-color: var(--color-white)
+
+    @include tablet
+        margin-top: 3rem
+
+        .border-wrapper
+            @include radius
+            border-width: 3px
+            
+        .flex-wrapper
+            padding-left: 2rem
+
+        .logo img
+            height: 7rem
+
+        .score
+            @include padding(1rem 3rem)

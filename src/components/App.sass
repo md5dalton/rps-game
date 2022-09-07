@@ -1,0 +1,11 @@
+@use '../styles/globals' as *
+@use '../styles/util' as *
+
+main
+    @include flex(space-between)
+    flex-direction: column
+    padding-bottom: 2em
+    min-height: 80vh
+
+    @include tablet
+        min-height: 70vh

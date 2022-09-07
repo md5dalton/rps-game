@@ -1,0 +1,30 @@
+@use "../util" as *
+
+body
+    font-family: 'Barlow Semi Condensed', sans-serif
+    color: var(--color-text)
+
+body, button
+    font-weight: 600
+
+header
+    .score
+        text-align: center
+
+        .text
+            letter-spacing: 2px
+            text-transform: uppercase
+            color: var(--color-text-caption)
+
+            @include mobile-only
+                font-size: .7rem
+        
+        .number
+            font-size: 3rem
+            font-weight: 700
+            color: var(--color-text-dark)
+
+            @include tablet
+                font-size: 4rem
+
+

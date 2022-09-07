@@ -1,0 +1,35 @@
+@use "../../../styles/util" as *
+
+.game
+    --size-game-option: 130px
+
+    @include tablet
+        --size-game-option: 180px
+
+    @include flex(center)
+    gap: 1rem
+    padding-top: 5rem
+
+    .caption
+        text-transform: uppercase
+        text-align: center
+
+    &.step-1
+        background-image: url("../../../../dist/images/bg-triangle.svg")
+        background-repeat: no-repeat
+        background-position: bottom
+        background-size: 70%
+
+        justify-content: space-around
+
+        .caption
+            display: none
+            
+        @include tablet
+            width: 500px
+            flex-wrap: wrap
+
+
+    @include mobile-only
+        width: 350px
+        flex-wrap: wrap

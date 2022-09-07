@@ -1,0 +1,25 @@
+@use 'sass:map'
+@use "./variables" as *
+
+@mixin flex ($justify: false, $align: center)
+    display: flex
+    align-items: $align
+
+    @if $justify
+        justify-content: $justify
+
+    @content
+
+
+@mixin radius ($value: $borderRadius)
+    border-radius: $value
+
+@mixin transition ($value: $transition)
+    transition: $value
+
+@mixin padding ($value: $padding)
+    padding: $value
+
+@mixin padding-x ($value: $padding * 2)
+    padding-left: $value
+    padding-right: $value

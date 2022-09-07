@@ -1,0 +1,21 @@
+@use "../../../../styles/util" as *
+
+.report
+    span
+        font-size: 4rem
+        text-transform: uppercase
+
+    button
+        background-color: var(--color-white)
+        color: var(--color-text-dark)
+        width: 100%
+        margin-top: 1rem
+        height: 3rem
+
+
+    @include mobile-only
+        order: 4
+        margin-top: 2rem
+
+    @include tablet
+        margin: 0 5rem 
