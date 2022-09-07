@@ -55,10 +55,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-<!-- - Repository URL: [Github](https://github.com/md5dalton/advice-gen) -->
-<!-- - Live Site URL: [Vercel](hhttps://advice-delta.vercel.app/) -->
-<!-- - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges) -->
-
+- Repository URL: [Github](https://github.com/md5dalton/rps-game)
+- Live Site URL: [Vercel](https://rps-game-nine.vercel.app/)
 
 ## My process
 

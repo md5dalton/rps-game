@@ -6,30 +6,59 @@
     @include tablet
         --size-game-option: 180px
 
-    @include flex(center)
-    gap: 1rem
-    padding-top: 5rem
+    display: grid
+    margin-top: 5rem
 
     .caption
         text-transform: uppercase
         text-align: center
 
+    &.step-1, &.step-2, &.step-3, &.step-4
+        column-gap: 5rem
+
     &.step-1
         background-image: url("../../../../dist/images/bg-triangle.svg")
         background-repeat: no-repeat
         background-position: bottom
-        background-size: 70%
 
-        justify-content: space-around
+        grid-template-areas: "slot-1 slot-2" "slot-3 slot-3"
+        row-gap: 4rem
+
+        .game-option:last-child
+            grid-area: slot-3
 
         .caption
             display: none
             
         @include tablet
-            width: 500px
-            flex-wrap: wrap
+            background-position: center
+            row-gap: 3rem
 
+    &.step-2, &.step-3, &.step-4
+        @include tablet
+            --size-game-option: 280px
 
+            .game-option .shadow
+                border-width: 2rem
+
+                img
+                    transform: scale(2)
+
+    &.step-2, &.step-3
+        grid-template-columns: 1fr 1fr
+        
     @include mobile-only
-        width: 350px
-        flex-wrap: wrap
+        &.step-4
+            grid-template-areas: "slot-1 slot-2" "slot-3 slot-3"
+            justify-items: center
+
+            .report
+                grid-area: slot-3
+
+    @include tablet
+        margin-top: 3rem
+        margin-bottom: 3rem
+
+        &.step-4
+            grid-template-columns: 1fr 1fr 1fr
+            align-items: center

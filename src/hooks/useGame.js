@@ -27,7 +27,7 @@ export default () => {
 
     const userRef = useRef("")
     const houseRef = useRef("")
-    const pointRef = useRef("")
+    const pointRef = useRef(0)
 
     const { addPoint } = useContext(GameContext)
 

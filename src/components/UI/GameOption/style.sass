@@ -17,11 +17,8 @@
         height: var(--size-game-option)
 
         &.won
-            box-shadow: 0 0 0 1rem rgba(255, 255, 255, .05), 0 0 0 3rem rgba(255, 255, 255, .05), 0 0 0 5rem rgba(255, 255, 255, .05)
+            @include shadows(1rem, 3rem, 5rem)
             
-            @include tablet
-                box-shadow: 0 0 0 6rem rgba(255, 255, 255, .05), 0 0 0 9rem rgba(255, 255, 255, .05), 0 0 0 12rem rgba(255, 255, 255, .05)
-
     &:not(&.empty) .shadow
         @include flex(center)
         background-color: white
@@ -39,6 +36,14 @@
         height: 100%
         background-color: var(--color-bg-empty-slot)
 
-        @include tablet
-            img
-                transform: scale(1.5)
+    @include tablet
+        .option-icon.won
+            @include shadows(4rem, 8rem, 12rem)
+
+        .caption
+            order: -1
+            margin: 2rem 0
+
+        .shadow img
+            transform: scale(1.5)
+
